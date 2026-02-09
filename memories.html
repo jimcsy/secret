@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    <title>Memories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/memories.css">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="heart-spinner">❤️</div>
+        <div class="loader-text">Preparing Memories...</div>
+    </div>
+
+    <div id="top-ui">
+        <div class="instruction-text">Drag memories to the chest!</div>
+        <div id="progress-bar">0 / 10</div>
+    </div>
+
+    <div id="photo-container"></div>
+    
+    <div id="chest-container">
+        <img src="images/chest_open.png" id="chest-img" alt="Treasure Chest">
+    </div>
+
+    <script src="script/memories.js"></script>
+</body>
+</html>

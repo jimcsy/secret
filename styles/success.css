@@ -1,0 +1,158 @@
+ body {
+            background-color: #ffc0cb;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        /* --- TEXT --- */
+        .header-text {
+            margin-top: 50px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        h1 {
+            color: #d63333;
+            font-size: 3rem;
+            margin: 0;
+            animation: popIn 1s ease-out;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: #ff4757;
+            font-size: 1.6rem;
+            margin-top: 15px;
+            animation: slideUp 1.5s ease-out;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* --- THE HANGING NECKLACE SIMULATION --- */
+        #necklace-container {
+            position: absolute;
+            top: -20px; /* Start slightly off screen */
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            /* Physics: Swaying Motion */
+            transform-origin: top center;
+            animation: sway 3s infinite ease-in-out alternate;
+            z-index: 5;
+        }
+
+        /* The Gold Chain */
+        .chain {
+            width: 4px;
+            height: 300px; /* Length of chain */
+            background: repeating-linear-gradient(
+                to bottom,
+                 #ff4757 0px,
+                #ff4756c5 5px,
+                #f81f31 10px
+            ); /* Gold bead effect */
+            box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+        }
+
+        /* The Locket Frame */
+        .locket {
+            width: 180px;
+            height: 160px;
+            background: radial-gradient(circle at 30% 30%, #ff4757, #f81f31);
+            margin-top: -10px; /* Connect to chain */
+            
+            /* Heart Shape CSS */
+            clip-path: path('M90,160 C90,160 180,100 180,50 C180,10 140,-10 90,30 C40,-10 0,10 0,50 C0,100 90,160 90,160 Z');
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            position: relative;
+        }
+
+        /* The Photo Inside */
+        .locket-photo {
+            width: 160px;
+            height: 140px;
+            object-fit: cover;
+            /* Inner Heart Shape */
+            clip-path: path('M80,140 C80,140 160,85 160,45 C160,10 125,-10 80,25 C35,-10 0,10 0,45 C0,85 80,140 80,140 Z');
+        }
+
+        /* Shine effect on locket */
+        .locket::after {
+            content: '';
+            position: absolute;
+            top: 10%; left: 10%;
+            width: 30%; height: 20%;
+            background: rgba(255,255,255,0.6);
+            border-radius: 50%;
+            filter: blur(5px);
+        }
+
+        /* --- BOUQUET --- */
+        .bouquet-container {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 6;
+            animation: breathe 4s infinite ease-in-out;
+        }
+
+        .bouquet-img {
+            width: 800px; /* Adjust based on your image */
+            height: auto;
+            filter: drop-shadow(0 -5px 15px rgba(0,0,0,0.1));
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes sway {
+            0% { transform: translateX(-50%) rotate(5deg); }
+            100% { transform: translateX(-50%) rotate(-5deg); }
+        }
+
+        @keyframes breathe {
+            0% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.05); }
+            100% { transform: translateX(-50%) scale(1); }
+        }
+
+        @keyframes popIn {
+            0% { transform: scale(0); opacity: 0; }
+            80% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Background Hearts */
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            font-size: 24px;
+            color: #fff;
+            opacity: 0.6;
+            animation: floatUp 5s linear infinite;
+            z-index: 1;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+        }

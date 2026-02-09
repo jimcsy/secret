@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    <title>For You </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/envelope.css">
+</head>
+<body>
+
+    <div class="message-bubble" id="bubble">
+        <h1>"hii"</h1>
+        <p>I have a special delivery for you.<br>Are you ready?</p>
+        <button class="start-btn" onclick="startGame()">Receive Delivery</button>
+    </div>
+
+    <div id="envelope-wrapper" onclick="handleClick()">
+        <div id="tooltip" class="catch-me-tooltip">Catch me if you can! 💨</div>
+
+        <div class="envelope">
+            <div class="back"></div>
+            <div class="letter">
+                <div class="letter-content">
+                    <h2>Hello Love,</h2>
+                    <p>I have a little game for you...</p>
+                </div>
+            </div>
+            <div class="front"></div> 
+            <div class="flap"></div>
+            <div class="seal">❤️</div>
+        </div>
+    </div>
+
+    <button class="load-memories-btn" onclick="location.href='memories.html'">
+        Load Memories ➡️
+    </button>
+
+    <script src="script/envelope.js"></script>
+
+</body>
+</html>

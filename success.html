@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+    <title>Yay! </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/success.css">
+</head>
+<body>
+
+    <div class="header-text">
+        <h1>YAAAAY! </h1>
+        <h2>Thank you for being my girlfriend!</h2>
+    </div>
+
+    <div id="necklace-container">
+        <div class="chain"></div>
+        <div class="locket">
+            <img src="images/image1.jpg" class="locket-photo" alt="Us">
+        </div>
+    </div>
+
+    <div class="bouquet-container">
+        <img src="images/boquet.png" class="bouquet-img" alt="Bouquet">
+    </div>
+
+    <script>
+        // Start floating hearts / confetti
+        function startCelebration() {
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.innerHTML = ["❤️", "💖", "🌸", "🌹"][Math.floor(Math.random() * 4)];
+                heart.classList.add('heart');
+                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+                heart.style.fontSize = Math.random() * 20 + 20 + "px";
+                document.body.appendChild(heart);
+
+                setTimeout(() => { heart.remove(); }, 6000);
+            }, 200);
+        }
+        window.onload = startCelebration;
+    </script>
+</body>
+</html>
