@@ -1,15 +1,15 @@
 // CONFIG - Edit your comments here!
         const myPhotos = [
-            { src: "images/image1.jpg", text: "That first coffee date ☕" },
-            { src: "images/image1.jpg", text: "You look so happy here!" },
-            { src: "images/image1.jpg", text: "Best summer ever ☀️" },
-            { src: "images/image1.jpg", text: "I love your smile" },
-            { src: "images/image1.jpg", text: "Our favorite spot 🍕" },
-            { src: "images/image1.jpg", text: "Dancing in the rain" },
-            { src: "images/image1.jpg", text: "Movie night snacks 🍿" },
-            { src: "images/image1.jpg", text: "Forever thankful for this" },
-            { src: "images/image1.jpg", text: "You're my best friend" },
-            { src: "images/image1.jpg", text: "Let's make more memories! ❤️" }
+            { src: "images/image1.jpg", text: "Ako ang iyong pahing >_<" },
+            { src: "images/image2.jpg", text: "Deserve mo yan ganda" },
+            { src: "images/image3.jpg", text: "Wehoo Tagaytay" },
+            { src: "images/image4.jpg", text: "Parang movie lang" },
+            { src: "images/image5.jpg", text: "Bagay na bagay" },
+            { src: "images/image6.jpg", text: "FAV PIC" },
+            { src: "images/image7.jpg", text: "Binondo" },
+            { src: "images/image8.jpg", text: "Dito nawala phone ko HAHSHA" },
+            { src: "images/image9.jpg", text: "So prettyyy babyy" },
+            { src: "images/image10.jpg", text: "More walking wit u" }
         ];
         
         let collectedCount = 0;

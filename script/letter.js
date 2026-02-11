@@ -17,8 +17,12 @@
                 // 3. Show UI
                 setTimeout(() => {
                     document.getElementById('letter-container').classList.add('show');
-                    document.getElementById('reveal-btn').classList.add('show');
                 }, 2000);
+                
+                // 4. Show button 3 seconds after letter
+                setTimeout(() => {
+                    document.getElementById('reveal-btn').classList.add('show');
+                }, 5000);
             } else {
                 // FRESH LOAD ENTRY:
                 chestWrapper.classList.add('show'); // Fade in chest
@@ -26,8 +30,12 @@
                 setTimeout(() => { chestWrapper.classList.add('move-right'); }, 2000);
                 setTimeout(() => {
                     document.getElementById('letter-container').classList.add('show');
-                    document.getElementById('reveal-btn').classList.add('show');
                 }, 3500);
+                
+                // Show button 3 seconds after letter
+                setTimeout(() => {
+                    document.getElementById('reveal-btn').classList.add('show');
+                }, 7500);
             }
         };
 

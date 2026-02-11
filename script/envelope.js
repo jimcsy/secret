@@ -59,7 +59,7 @@ let clickCount = 0;
                 moveRandomly();
 
                 // 5. Update Tooltip
-                const messages = ["Too small? 🔍", "Getting bigger! 🎈", "Almost there! 😤"];
+                const messages = ["HAHAHAHHAHA", "Isa pa", "Mabilis ba?"];
                 if (clickCount <= messages.length) tooltip.innerText = messages[clickCount - 1];
                 tooltip.style.opacity = '1';
 
